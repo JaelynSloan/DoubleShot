@@ -80,7 +80,7 @@
                 </li>
             </ul>
             <br />
-            <hr class="short" />
+            <hr class="strong" />
             <p>House Rules:</p>
             <ul>
                 <li>
@@ -90,10 +90,9 @@
                     Stay and play at your own risk. Trip insurance recommended.
                 </li>
             </ul>
+            <hr class="strong" />
         </div>
-    </section>
 
-    <section id="about-p2">
         <div class="about-container">
             <div class="section-p1">
                 <h2 class="font">Explore the Heart of Bourbon Country</h2>
@@ -235,8 +234,6 @@
                     </ul>
                 </div>
             </div>
-
-
     </section>
 
     <section id="images">
@@ -395,17 +392,28 @@
                     <img src="images/logo.jpg" />
                 </div>
                 <div class="col-b2">
-                    <h3><span>Welcome to Double Shot!</span></h3>
-                    <p>Let us help you get ready for your getaway!</p>
-                    <p>If you have any questions about your vacation rental or about Kentucky, just ask! We look forward
-                        to hearing from you.</p>
-                    <h3><span>Double Shot on Main</span></h3>
-                    <p>South Main St, Lawrenceburg KY 40324</p>
-                    <a class="email" href="mailto:jeanine@goldenpearlestates.com"><i
-                            class="fa-regular fa-envelope"></i>Jeanine@GoldenPearlEstates.com</a>
-                    <a href="https://www.facebook.com/DoubleShotOnMain" target="_blank"><i
-                            class="fa-brands fa-facebook"></i>Double Shot on Main</a>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" autocomplete="on">
+                        <input type="text" name="Name" id="name" placeholder="Your Name" required />
+                        <input type="email" name="Email" id="email" placeholder="Your Email Address" required />
+                        <input type="text" name="Phone" id="phone" placeholder="Your Phone Number" required />
+                        <textarea name="Message" id="message" rows="8" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
                 </div>
+
+            </div>
+            <div class="centered">
+                <h3><span>Welcome to Double Shot!</span></h3>
+                <p>Let us help you get ready for your getaway!</p>
+                <p>If you have any questions about your vacation rental or about Kentucky, just ask! We look
+                    forward
+                    to hearing from you.</p>
+                <h3><span>Double Shot on Main</span></h3>
+                <p>South Main St, Lawrenceburg KY 40324</p>
+                <a class="email" href="mailto:jeanine@goldenpearlestates.com"><i
+                        class="fa-regular fa-envelope"></i>Jeanine@GoldenPearlEstates.com</a>
+                <a href="https://www.facebook.com/DoubleShotOnMain" target="_blank"><i
+                        class="fa-brands fa-facebook"></i>Double Shot on Main</a>
             </div>
         </div>
     </section>
