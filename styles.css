@@ -2,6 +2,8 @@
     margin: 0;
     font-family: "Roboto", serif;
     scroll-behavior: smooth;
+    cursor: default;
+    -webkit-scroll-behavior: smooth;
 }
 
 section {
@@ -18,6 +20,7 @@ h3,
 h4 {
     margin: 0;
     font-weight: normal;
+    cursor: default;
 }
 
 h2 {
@@ -34,6 +37,7 @@ h4 {
 
 p {
     font-size: 1.2vw;
+    cursor: default;
 }
 
 a {
@@ -101,18 +105,16 @@ a {
 
 .col-1,
 .col-2,
-col-3,
-col-4,
+.col-3,
+.col-4,
 .col-a1,
 .col-a2 {
     flex: 1;
 }
 
 .head {
-    font-size: 2vw;
-    width: 100%;
-    text-align: left;
-    padding: 20px;
+    padding: 20px 0;
+    margin-left: 20px;
 }
 
 
