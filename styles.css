@@ -1,0 +1,679 @@
+﻿body {
+    margin: 0;
+    font-family: "Roboto", serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 100vh; /* Each section takes up full screen height */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.2vw;
+}
+
+h3 {
+    font-size: 1.8vw;
+}
+
+h4{
+    font-size: 1.5vw;
+}
+
+p{
+    font-size: 1.2vw;
+}
+
+a{
+    text-decoration: none;
+    color: none;
+}
+
+.font {
+    font-family: "Bona Nova SC", serif;
+}
+.head {
+    text-align: left; /* Align the heading and <hr> to the left */
+    width: 100%; /* Ensure it spans the full width of its container */
+    padding-left: 20px; /* Add space between the edge of the page and the content */
+}
+
+.strong {
+    border: none;
+    height: 5px;
+    background-color: #40220d;
+    border-radius: 2px;
+    width: 70%; /* Adjust width to match design */
+    margin-top: 5px; /* Space between the heading and <hr> */
+    margin-left: 0; /* Ensure the <hr> is aligned with the <h2> */
+}
+
+.img-vert {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.section-p1, .section-l1, .about-container, . {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    .section-p1 {
+        text-align: center;
+        width: 80vw;
+        margin-top: 40px;
+    }
+
+    .header {
+        font-size: 2vw;
+    }
+
+    .column-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .col-1, .col-2, col-3, col-4, .col-a1, .col-a2 {
+        flex: 1;
+    }
+
+    .head {
+        font-size: 2vw;
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+    }
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ------ HOME ------ */
+#home {
+    font-family: "Bona Nova SC", serif;
+}
+
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000000;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    flex: 1;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+    .background-video.fade {
+        animation: fadeOut 2s forwards;
+    }
+
+/* Title */
+.title {
+    font-size: 2.5vw;
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    transform: translateX(-50%);
+    color: #f8f4e1;
+    text-align: center;
+    z-index: 2;
+    padding: 40px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    margin: 10px 40px;
+}
+
+    .title.fade {
+        animation: fadeOut 2s forwards;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    /*    background: #40220D;
+    background: -moz-linear-gradient(45deg, #40220D 0%, #96623C 100%, #40220D 100%);
+    background: -webkit-linear-gradient(45deg, #40220D 0%, #96623C 100%, #40220D 100%);
+    background: linear-gradient(45deg, #40220D 0%, #96623C 100%, #40220D 100%);*/
+    background-color: #f8f4e1;
+}
+
+.phrase {
+    color: #40220d;
+    margin: 40px;
+    text-align: center;
+    font-size: 2.3vw;
+}
+
+.navbar {
+    background-color: transparent;
+    font-size: 1.5vw;
+}
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+        .navbar ul li a {
+            color: #40220d;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            .navbar ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+
+/* ------ ABOUT ------ */
+#about {
+    background-image: url('images/glass.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f8f4e1;
+    display: flex;
+    flex-direction: column;
+}
+.section-p1 h4{
+    font-size: 1.2vw;
+}
+
+.section-p1 span {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+}
+
+.section-l1 {
+    float: left;
+    margin-top: 20px;
+    width: 80vw;
+}
+
+    /* Clear float */
+    .section-l1::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Optional: Add some styling to the lists */
+    .section-l1 ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+        .section-l1 ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-size: 1vw;
+        }
+
+    .section-l1 p {
+        margin-top: 20px;
+        font-size: 1.2vw;
+    }
+
+.short {
+    text-align: left;
+    width: 50vw;
+    margin-left: 0;
+}
+
+#about-p2 {
+    background-color: #f8f4e1;
+    color: #40220d;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-container p {
+    margin-bottom: 0;
+}
+
+.column-container ul {
+    margin: 0;
+    list-style-type: disc; /* Use disc bullets for better visibility */
+    padding-left: 20px; /* Indent the list items */
+}
+
+    /* Style each list item */
+    .column-container ul li {
+        margin-bottom: 5px; /* Space out individual items */
+        padding-left: 5px; /* Add some padding for better readability */
+        font-size: 1.0vw;
+    }
+
+
+/* ------ IMAGES ------ */
+#images {
+    background-image: url('images/barrel_wall.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0; /* Optional padding to give some space around the images */
+}
+
+.image-container {
+    width: 90%; /* Adjust the width to fit within the section */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    max-width: 19%; /* Ensures 5 columns fit in one row */
+}
+
+    .column img {
+        display: block;
+        max-width: 100%;
+        height: auto; /* Maintain the aspect ratio */
+        margin: 20px auto; /* Center the images horizontally */
+        object-fit: contain; /* Ensure the image fits within its container without stretching */
+        border: 2px solid #f8f4e1;
+        cursor: pointer;
+    }
+
+/* The popup (background) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Content (the image) */
+.popup-content {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take up the full height of the viewport */
+}
+
+    .popup-content img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+/* ------ REVIEWS ------ */
+#reviews {
+    background-color: #f8f4e1;
+    color: #40220d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.review-container {
+    width: 100%;
+}
+
+.review-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.top, .bottom {
+    border: 3px #40220d solid;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.top {
+    height: 40vh; /* Fixed height for uniformity */
+    padding: 20px;
+    margin-bottom: 5px;
+    overflow: hidden; /* Hide overflow text */
+}
+
+.top p{
+    font-size: 1vw;
+}
+
+.bottom {
+    height: 20vh; /* Fixed height for uniformity */
+    padding: 10px;
+    overflow: hidden; /* Hide overflow text */
+}
+
+.stars {
+    color: #FFA500;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+    .stars p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+.rating-r3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.rating-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Adjust width to ensure equal columns */
+    max-width: 400px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+    .rating-col a {
+        color: #40220d;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-bottom: 5px; /* Reduce margin for closer spacing */
+    }
+
+        .rating-col a:hover {
+            background-color: #dfdbca;
+            padding: 5px;
+        }
+
+    .rating-col p {
+        margin: 0; /* Reduce margin for closer spacing */
+    }
+
+    .rating-col .stars {
+        margin-top: 5px; /* Reduce margin for closer spacing */
+    }
+
+.rating-image {
+    width: 2vw;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+
+/* ------ BOOKING ------ */
+
+#book {
+    background-color: #f8f4e1;
+    color: #40220d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.book-container {
+    width: 100%;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    width: 100%;
+}
+
+.col-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between elements */
+    margin-left: 20px;
+}
+
+    .col-1 a {
+        font-size: 1.5vw;
+        color: #40220d;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-bottom: 10px; /* Add spacing below links */
+        display: flex;
+        align-items: center; /* Align icons and text */
+    }
+
+    .col-1 i {
+        margin-right: 10px; /* Add spacing between icon and text */
+        transition: transform 0.3s ease; /* Ensure smooth scaling */
+    }
+
+    .col-1 a:hover i {
+        transform: scale(1.3); /* Grow the icon on hover */
+    }
+
+.col-2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .col-2 img {
+        max-width: 100%;
+        height: 80vh;
+    }
+
+
+
+/* ------ CONTACT ------ */
+
+#contact {
+    background-color: #f8f4e1;
+    color: #40220d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-container {
+    width: 100%;
+}
+
+.col-b1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .col-b1 img {
+        max-width: 100%;
+        height: auto;
+        max-height: 80vh;
+    }
+
+.col-b2 {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.col-b2 h3 {
+    margin-bottom: 15px; /* Add spacing below headings */
+}
+
+.col-b2 p {
+    margin-bottom: 15px; /* Add spacing below paragraphs */
+}
+
+.col-b2 a {
+    font-size: 1.2vw;
+    color: #40220d;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* Add spacing below links */
+    display: flex;
+    align-items: center; /* Align icons and text */
+}
+
+.col-b2 i {
+    margin-right: 10px; /* Add spacing between icon and text */
+    transition: transform 0.3s ease; /* Ensure smooth scaling */
+}
+
+.col-b2 a:hover i {
+    transform: scale(1.3); /* Grow the icon on hover */
+}
+
+.col-b2 span {
+    margin-top: 10px;
+    font-family: "Bona Nova SC", serif;
+}
+
