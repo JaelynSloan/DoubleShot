@@ -8,7 +8,6 @@
 
 section {
     min-height: 100vh;
-    /* Each section takes up full screen height */
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -24,19 +23,19 @@ h4 {
 }
 
 h2 {
-    font-size: 2.2vw;
+    font-size: 2.0em;
 }
 
 h3 {
-    font-size: 1.8vw;
+    font-size: 1.6em;
 }
 
 h4 {
-    font-size: 1.5vw;
+    font-size: 1.3em;
 }
 
 p {
-    font-size: 1.2vw;
+    font-size: 1em;
     cursor: default;
 }
 
@@ -51,11 +50,8 @@ a {
 
 .head {
     text-align: left;
-    /* Align the heading and <hr> to the left */
     width: 100%;
-    /* Ensure it spans the full width of its container */
     padding-left: 20px;
-    /* Add space between the edge of the page and the content */
 }
 
 .strong {
@@ -64,11 +60,8 @@ a {
     background-color: #40220d;
     border-radius: 2px;
     width: 70%;
-    /* Adjust width to match design */
     margin-top: 5px;
-    /* Space between the heading and <hr> */
     margin-left: 0;
-    /* Ensure the <hr> is aligned with the <h2> */
 }
 
 .img-vert {
@@ -80,15 +73,12 @@ a {
 
 .section-p1,
 .section-l1,
-.about-container,
-. {
-    max-width: 1200px;
+.about-container {
     margin: 0 auto;
 }
 
 .section-p1 {
-    text-align: center;
-    width: 80vw;
+    width: 90vw;
     margin-top: 40px;
 }
 
@@ -137,7 +127,6 @@ a:hover {
     
 }
 
-/* Video Wrapper */
 .video-wrapper {
     position: relative;
     width: 100%;
@@ -147,13 +136,14 @@ a:hover {
     background-color: #000000;
 }
 
-/* Background Video */
 .background-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%; /* Ensure the video covers the entire width */
+    min-width: 100%;
     min-height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
     transform: translate(-50%, -50%);
     object-fit: cover;
     opacity: 0;
@@ -164,9 +154,8 @@ a:hover {
     animation: fadeOut 2s forwards;
 }
 
-/* Title */
 .title {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     position: absolute;
     top: 0;
     left: 20vw;
@@ -220,7 +209,7 @@ a:hover {
     color: #40220d;
     margin: 40px;
     text-align: center;
-    font-size: 2.3vw;
+    font-size: 1.3em;
 }
 
 .navbar {
@@ -250,9 +239,6 @@ a:hover {
 
 /* ------ ABOUT ------ */
 #about {
-    /* background-image: url('images/glass.JPG');
-    background-size: cover;
-    background-position: center; */
     color: #40220d;
     display: flex;
     flex-direction: column;
@@ -261,7 +247,11 @@ a:hover {
 
 .section-p1 h4 {
     text-align: left;
-    font-size: 1.2vw;
+    font-size: 1.2em;
+    padding-bottom: 40px;
+}
+
+.section-p1 h3 {
     padding-bottom: 40px;
 }
 
@@ -272,18 +262,16 @@ a:hover {
 
 .section-l1 {
     float: left;
-    margin-top: 20px;
-    width: 80vw;
+    margin: 20px auto;
+    width: 90vw;
 }
 
-/* Clear float */
 .section-l1::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Optional: Add some styling to the lists */
 .section-l1 ul {
     list-style-type: none;
     padding-left: 0;
@@ -292,12 +280,12 @@ a:hover {
 .section-l1 ul li {
     margin-bottom: 10px;
     line-height: 1.6;
-    font-size: 1vw;
+    font-size: 1em;
 }
 
 .section-l1 p {
     margin-top: 20px;
-    font-size: 1.2vw;
+    font-size: 1.2em;
 }
 
 .short {
@@ -318,18 +306,13 @@ a:hover {
 .column-container ul {
     margin: 0;
     list-style-type: disc;
-    /* Use disc bullets for better visibility */
     padding-left: 20px;
-    /* Indent the list items */
+    padding-top: 5px;
 }
 
-/* Style each list item */
 .column-container ul li {
     margin-bottom: 5px;
-    /* Space out individual items */
     padding-left: 5px;
-    /* Add some padding for better readability */
-    font-size: 1.0vw;
 }
 
 .about-container {
@@ -345,12 +328,10 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    /* Optional padding to give some space around the images */
 }
 
 .image-container {
     width: 90%;
-    /* Adjust the width to fit within the section */
 }
 
 .row {
@@ -361,26 +342,20 @@ a:hover {
 .column {
     flex: 1;
     max-width: 19%;
-    /* Ensures 5 columns fit in one row */
 }
 
 .column img {
     display: block;
     max-width: 100%;
     height: auto;
-    /* Maintain the aspect ratio */
     margin: 20px auto;
-    /* Center the images horizontally */
     object-fit: contain;
-    /* Ensure the image fits within its container without stretching */
     border: 2px solid black;
     cursor: pointer;
 }
 
-/* The popup (background) */
 .popup {
     display: none;
-    /* Hidden by default */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -392,7 +367,6 @@ a:hover {
     align-items: center;
 }
 
-/* Popup Content (the image) */
 .popup-content {
     display: flex;
     margin: 100px auto;
@@ -400,11 +374,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     max-height: 80vh;
-    /* Take up the full height of the viewport */
 }
 
-
-/* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
@@ -429,7 +400,6 @@ a:hover {
     border-radius: 3px 0 0 3px;
 }
 
-/* Close button */
 .close {
     position: absolute;
     top: 15px;
@@ -446,7 +416,6 @@ a:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -497,23 +466,23 @@ a:hover {
 
 .top {
     height: 40vh;
-    /* Fixed height for uniformity */
     padding: 20px;
     margin-bottom: 5px;
     overflow: hidden;
-    /* Hide overflow text */
 }
 
 .top p {
-    font-size: 1vw;
+    font-size: 1.1em;
 }
 
 .bottom {
     height: 20vh;
-    /* Fixed height for uniformity */
     padding: 10px;
     overflow: hidden;
-    /* Hide overflow text */
+}
+
+.bottom p {
+    font-size: 1.2em;
 }
 
 .stars {
@@ -540,7 +509,6 @@ a:hover {
     flex-direction: column;
     align-items: center;
     width: 45%;
-    /* Adjust width to ensure equal columns */
     max-width: 400px;
     margin: 0 10px;
     text-align: center;
@@ -552,7 +520,6 @@ a:hover {
     border-radius: 5px;
     transition: background-color 0.3s;
     margin-bottom: 5px;
-    /* Reduce margin for closer spacing */
 }
 
 .rating-col a:hover {
@@ -562,12 +529,10 @@ a:hover {
 
 .rating-col p {
     margin: 0;
-    /* Reduce margin for closer spacing */
 }
 
 .rating-col .stars {
     margin-top: 5px;
-    /* Reduce margin for closer spacing */
 }
 
 .rating-image {
@@ -597,7 +562,6 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* Align items at the top */
     width: 100%;
 }
 
@@ -605,10 +569,12 @@ a:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* Stack elements vertically */
     gap: 20px;
-    /* Space between elements */
     margin-left: 20px;
+}
+
+.col-1 h4{
+    margin-bottom: 20px;
 }
 
 .col-1 a {
@@ -618,22 +584,17 @@ a:hover {
     border-radius: 5px;
     transition: background-color 0.3s;
     margin-bottom: 10px;
-    /* Add spacing below links */
     display: flex;
     align-items: center;
-    /* Align icons and text */
 }
 
 .col-1 i {
     margin-right: 10px;
-    /* Add spacing between icon and text */
     transition: transform 0.3s ease;
-    /* Ensure smooth scaling */
 }
 
 .col-1 a:hover i {
     transform: scale(1.3);
-    /* Grow the icon on hover */
 }
 
 .col-2 {
@@ -724,6 +685,7 @@ a:hover {
 }
 
 .centered {
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -731,12 +693,10 @@ a:hover {
 
 .centered h3 {
     margin: 15px 0;
-    /* Add spacing below headings */
 }
 
 .centered p {
     margin: 0;
-    /* Add spacing below paragraphs */
 }
 
 .centered a {
@@ -746,25 +706,130 @@ a:hover {
     border-radius: 5px;
     transition: background-color 0.3s;
     margin-top: 10px;
-    /* Add spacing below links */
     display: flex;
     align-items: center;
-    /* Align icons and text */
 }
 
 .centered i {
     margin-right: 10px;
-    /* Add spacing between icon and text */
     transition: transform 0.3s ease;
-    /* Ensure smooth scaling */
 }
 
 .centered a:hover i {
     transform: scale(1.3);
-    /* Grow the icon on hover */
 }
 
 .centered span {
     margin-top: 10px;
     font-family: "Bona Nova SC", serif;
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 2em;
+    }
+
+    .phrase h2 {
+        font-size: 1.5em;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+
+    .section-l1, .section-p1{
+        width: 90vw;
+    }
+
+    .section-p1 h4 {
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .section-p1 p {
+        font-size: 1.1em
+    }
+
+    .section-l1 p {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .section-l1 ul li {
+        font-size: 1rem;
+    }
+
+    .strong {
+        height: 2px;
+    }
+
+
+    .column-container {
+        flex-direction: column;
+        max-width: 95vw;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .column-container p {
+            padding: 10px 0;
+        }
+        .column-container ul li{
+            font-size: 0.9em;
+            padding-left: 0;
+        }
+
+    #images {
+        background-size: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        max-width: 40%;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    .background-video{
+        max-width: none;
+        min-width: 100vw;
+        width: 200%;
+        height: auto;
+        transform: translate(-70%, -50%);
+    }
+
+    .title{
+        width: 50%;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .phrase h2 {
+        font-size: 1.3rem;
+        margin: auto;
+    }
+
+    .navbar{
+        max-width: 100vw;
+    }
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 2vw;
+    }
+
+        .navbar ul li {
+            margin: 5px 0;
+        }
 }
