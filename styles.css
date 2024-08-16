@@ -88,6 +88,7 @@ a {
 
 .column-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -328,27 +329,21 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+    
 }
 
 .image-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
     width: 90%;
+    height: 100%;
 }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.column {
-    flex: 1;
-    max-width: 19%;
-}
-
-.column img {
-    display: block;
+.image-container img {
     max-width: 100%;
     height: auto;
-    margin: 20px auto;
+    margin: 0 auto;
     object-fit: contain;
     border: 2px solid black;
     cursor: pointer;
@@ -557,7 +552,7 @@ a:hover {
     width: 100%;
 }
 
-.column-container {
+.row-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -627,16 +622,17 @@ a:hover {
 }
 
 .col-b1 {
-    margin-left: 20px;
+    margin: 0 auto;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 30vw;
+    max-width: 90%;
+    width: 100%
 
 }
 
-.col-b1 img {
+.col-b2 img {
     max-width: 50vh;
     height: auto;
     max-height: 50vh;
@@ -645,14 +641,15 @@ a:hover {
 
 
 .col-b2 {
+    margin: 20px auto;
     flex: 1;
-    margin: 0 20px;
-    padding: 20px;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    width: 100%
 }
 
-.col-b2 {
-    form {
+.col-b1 form {
         width: 100%;
     }
 
@@ -682,24 +679,19 @@ a:hover {
     }
 
 
+.info {
+    margin: 0 auto;
 }
 
-.centered {
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.centered h3 {
+.info h3 {
     margin: 15px 0;
 }
 
-.centered p {
+.info p {
     margin: 0;
 }
 
-.centered a {
+.info a {
     font-size: 1.2vw;
     color: #40220d;
     text-decoration: none;
@@ -710,21 +702,25 @@ a:hover {
     align-items: center;
 }
 
-.centered i {
+.info i {
     margin-right: 10px;
     transition: transform 0.3s ease;
 }
 
-.centered a:hover i {
+.info a:hover i {
     transform: scale(1.3);
 }
 
-.centered span {
+.info span {
     margin-top: 10px;
     font-family: "Bona Nova SC", serif;
 }
 
 @media (max-width: 768px) {
+    h3{
+        font-size: 1.2em;
+    }
+
     .title h1 {
         font-size: 2em;
     }
@@ -738,27 +734,8 @@ a:hover {
         padding: 10px 5px;
     }
 
-    .section-l1, .section-p1{
-        width: 90vw;
-    }
-
     .section-p1 h4 {
-        font-size: 1.3rem;
-        text-align: center;
-        padding: 0;
-    }
-
-    .section-p1 p {
-        font-size: 1.1em
-    }
-
-    .section-l1 p {
-        font-size: 1.1rem;
-        margin: 0;
-    }
-
-    .section-l1 ul li {
-        font-size: 1rem;
+        padding-bottom: 0;
     }
 
     .strong {
@@ -776,7 +753,8 @@ a:hover {
         .column-container p {
             padding: 10px 0;
         }
-        .column-container ul li{
+
+        .column-container ul li {
             font-size: 0.9em;
             padding-left: 0;
         }
@@ -785,21 +763,93 @@ a:hover {
         background-size: auto;
     }
 
-    .row {
-        flex-direction: column;
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .head {
+        margin: 0 auto;
+    }
+
+        .head h2 {
+            font-size: 1.3em;
+        }
+
+    .review-icon-container {
         flex-wrap: wrap;
     }
 
-    .column {
-        max-width: 40%;
-        margin-bottom: 20px;
+    .shape{
+        width: 100%;
     }
 
+    .top, .bottom {
+        border: 2px solid #40220d;
+        margin-bottom: 0;
+    }
 
+    .top {
+        padding: 0 5px;
+    }
+
+    .bottom p{
+        font-size: 1em;
+    }
+
+    .top p{
+        font-size: 1em;
+    }
+
+    .rating-col h3 {
+        padding-bottom: 10px;
+    }
+
+    .rating-col a {
+        font-size: 1em;
+    }
+
+    .rating-image{
+        width: 5vw;
+    }
+
+    .col-1{
+        margin: 0;
+    }
+
+    .col-1 h4{
+        font-size: 1em;
+    }
+
+    .col-1 a{
+        font-size: 1em;
+    }
+
+    .col-2 img{
+        height: auto;
+    }
+
+    .col-b1{
+        max-width: 90vw;
+    }
+
+    .col-b1 form{
+        width: 80vw;
+    }
+
+    form input, form textarea {
+        font-size: 1em;
+    }
+
+    .col-b2 {
+        flex-direction: column;
+    }
+
+    .info a{
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 480px) {
-
     .background-video{
         max-width: none;
         min-width: 100vw;
