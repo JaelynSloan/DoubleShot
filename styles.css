@@ -812,6 +812,11 @@ a:hover {
         width: 5vw;
     }
 
+    .row-container{
+        display: flex;
+        flex-direction: column;
+    }
+
     .col-1{
         margin: 0;
     }
